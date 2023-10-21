@@ -1,18 +1,18 @@
+// Lib import
 const express = require('express');
-// import routes from './routes/index';
-// import File from './file';
+
+// File Import
+import { createThumbPath } from './resize-image';
+import routes from './routes/index';
 
 const app = express();
 const port: number = 3000;
 
-// Add routes
-// app.use(routes);
+app.use(routes);
 
-// Start server
-app.listen(port, async (): Promise<void> => {
-  // Make sure that thumb path is available
-  //   await File.createThumbPath()
-
+// Start server at port 3000
+app.listen(port, async () => {
+  await createThumbPath();
   console.log(`Server started at http://localhost:${port}`);
 });
 
