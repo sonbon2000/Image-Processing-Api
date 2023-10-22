@@ -8,8 +8,8 @@ import { ResizeImageParam } from './type';
 import { ImageParam } from './type';
 
 const fsp = fs.promises;
-const imageFull = path.resolve(__dirname, '../assets/images/full');
-const imageThumb = path.resolve(__dirname, '../assets/images/thumb');
+export const imageFull = path.resolve(__dirname, '../assets/images/full');
+export const imageThumb = path.resolve(__dirname, '../assets/images/thumb');
 
 /**
  * Get Image function
